@@ -23,7 +23,7 @@ jobs:
         username: ${{github.actor}}
         password: ${{secrets.GITHUB_TOKEN}}
     - name: Set Vars
-      run:  echo "imagename_pydantic-mcp-python=ghcr.io/semaverse/pydantic-mcp-python-run:basic-$(date +%Y-%m-%d)" >> $GITHUB_ENV       
+      run:  echo "imagename_pydantic-mcp-python=ghcr.io/semaverse/pydantic-mcp-python-run:basic-$(date +%Y-%m-%dT%H%M%S)" >> $GITHUB_ENV       
 
     - name: Build the Docker image pydantic-mcp-python
       run: | 
